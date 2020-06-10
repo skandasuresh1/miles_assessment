@@ -262,6 +262,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #eee;
 }
 
 .reward_square > p {

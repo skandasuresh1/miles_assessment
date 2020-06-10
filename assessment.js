@@ -2,10 +2,12 @@ let row_of_square = "";
 
 const dragstart_handler = function(ev) {
   ev.dataTransfer.setData("text/plain", ev.target.id);
+  ev.target.style.opacity = .5;
   row_of_square = ev.target.id.substring(0, 2);
-  console.log(row_of_square);
-  console.log(ev.target.id);
-  console.log(ev.target);
+}
+
+const dragend_handler = function(ev) {
+  ev.target.style.opacity = "";
 }
 
 const dragover_handler = function(ev) {
@@ -34,12 +36,15 @@ const drop_handler = function (ev) {
     if (square.id.includes("square")) {
       const nodeCopy = square.cloneNode(true);
       nodeCopy.addEventListener("dragstart", dragstart_handler);
+      nodeCopy.addEventListener("dragend", dragend_handler);
       nodeCopy.id = ev.target.id + "box";
       nodeCopy.children[0].removeAttribute("hidden");
       ev.target.appendChild(nodeCopy);
+      nodeCopy.style.opacity = "";
     } else {
       square.id = ev.target.id + "box";
       ev.target.appendChild(square);
+      square.style.opacity = "";
     }
   }
 }
@@ -49,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const r_drops = document.getElementsByClassName("r_drop");
   Array.from(reward_squares).forEach((square) => {
     square.addEventListener("dragstart", dragstart_handler);
+    square.addEventListener("dragend", dragend_handler);
   });
   Array.from(r_drops).forEach((drop) => {
     drop.addEventListener("drop", drop_handler);
