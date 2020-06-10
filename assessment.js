@@ -8,6 +8,7 @@ const dragstart_handler = function(ev) {
 
 const dragend_handler = function(ev) {
   ev.target.style.opacity = "";
+  ev.target.parentNode.style.background = "";
 }
 
 const dragover_handler = function(ev) {

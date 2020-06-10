@@ -198,7 +198,6 @@ body {
 }
 
 .empty {
-  border-bottom: solid thin gray;
 }
 
 .r1_container {
@@ -210,7 +209,6 @@ body {
 
 .r2_container {
   grid-area: r2;
-  border-top: solid thin gray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,7 +216,6 @@ body {
 
 .r3_container {
   grid-area: r3;
-  border-top: solid thin gray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -226,7 +223,6 @@ body {
 
 .r4_container {
   grid-area: r4;
-  border-top: solid thin gray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +230,6 @@ body {
 
 .r5_container {
   grid-area: r5;
-  border-top: solid thin gray;
   display: flex;
   justify-content: center;
   align-items: center;
