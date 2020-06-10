@@ -36,8 +36,8 @@ const drop_handler = function (ev) {
   const r_square = document.getElementById(data);
   const reward_num = r_square.id.substring(0, 2);
   const drop_zone_row = drop_zone.id.substring(0, 2);
+  drop_zone.style.background = "";
   if (reward_num === drop_zone_row && !drop_zone.hasChildNodes()) {
-    drop_zone.style.background = "";
     const new_id = drop_zone.id + "box";
     let dropped_square = r_square;
     if (r_square.id.includes("original")) {
