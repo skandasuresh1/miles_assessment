@@ -1,9 +1,4 @@
-// NOTE: You don't need to mess around with
-// CSS to follow the tutorial. Focus on the
-// JavaScript instead!
-// =========================
-
-// Some personal resets
+// resets
 html {
   box-sizing: border-box;
 }
